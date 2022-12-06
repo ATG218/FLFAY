@@ -1,2 +1,40 @@
 {% extends "base.html" %}
 {% block title %} Home {% endblock %}
+
+{% block body %} 
+<section id="home">
+    <div class="hero">
+        <div class="header">
+            <h1 class="wow FadeInUp" data-wow-delay="1s"><span class="in1">FLFAY</span></h1>
+            <h1 class="wow fadeInUp" data-wow-delay="1.2s"> <a href="/" class="in2" style="text-decoration: none; color: rgb(11, 11, 14) !important;">Financial Literacy For All Youth</a></h1>
+        </div>
+    </div>
+    <div class="scroll-down"></div>
+</section>
+
+
+
+<section id="statement">
+    <div class="hero">
+        <div class="container">
+            <h1 style="padding-bottom: 0px;" class="wow FadeInUp" data-wow-delay="1s"><span class="in1">Mission Statement</span></h1>
+            <p style="margin: 20px; text-align: center;">Financial Literacy For All Youth is a social impact initiative with the goal of preparing the next generation with financial literacy. Many historically marginalized communities may not have the access to resources and often fall into a cycle of bad habits. We promote and offer avenues for everyone to learn how to be smarter with their money. We also work to fundraise to support other organizations who share our mission.</p>
+        </div>
+    </div>
+</section>
+
+<div class="whitespace"></div><div class="whitespace"></div><div class="whitespace"></div>
+
+<script>
+    function redirect() {
+        window.location.href = "/#statement";
+      }
+      setTimeout(redirect, 2500);
+    
+    function hideDiv() {
+        document.getElementById("scroll-down").style.display=" none";
+      }
+      window.setTimeout(hideDiv, 2000); 
+    //WHY DOES THIS NOT WORK!!!!!!!!!!!
+</script>
+{% endblock %}

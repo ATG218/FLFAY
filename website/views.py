@@ -1,4 +1,5 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
+from flask_login import  login_required, current_user
 
 views = Blueprint('views', __name__)
 
@@ -15,3 +16,8 @@ def team():
 @views.route('/contact')
 def contact():
     return render_template("contact.html")
+
+@views.route('/admin')
+@login_required
+def admin():
+    return render_template("admin.html")
