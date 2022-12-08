@@ -28,7 +28,7 @@ def login():
 @auth.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('views.home'))
+    return redirect(url_for('views.contact'))
 
 @auth.route("/register", methods=["GET", "POST"])
 def register():
@@ -56,6 +56,6 @@ def register():
             db.session.commit()
             login_user(new_user, remember=True)
             flash('Account created!', category='success')
-            return redirect(url_for('views.home'))
+            return redirect(url_for('views.contact'))
 
-    return render_template(".html", user=current_user)
+    return render_template("register.html", user=current_user)
