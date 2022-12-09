@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %} Form {% endblock %}
+
+{% block body %} 
+<div class="whitespace"></div>
+<div class="whitespace"></div>
+
+<div class="container">
+    <div class="hero-content">
+        <br><br>
+            <h1 class="wow fadeInUp" data-wow-delay="0.1s" style="color:#b9e8e3">Contact Us!</h1>
+            <form class="row g-3" action="https://formsubmit.co/f251a26e7525f49b8303454907a5edc0" method="POST">
+              <!-- Honeypot -->
+              <input type="text" name="_honey" style="display: none;">
+    
+              <!-- Disable Captcha -->
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="box">
+              <input type="hidden" name="_next" value="index.html" >
+    
+              <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <label for="firstName" class="form-label">Name</label>
+                <input type="text" placeholder="Name" class="form-control" name="name" id="name" required>
+              </div>
+              <div class="col-md-8 wow fadeInUp" data-wow-delay="0.2s">
+                <label for="emailInfo" class="form-label">E-mail</label>
+                <input type="email" placeholder="Email" class="form-control" name="email" id="email" required>
+              </div>
+              <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                <label for="phoneNumber" class="form-label">Phone Number</label>
+                <input type="text" class="form-control" name="phone" id="phone" placeholder="(+1) 123-456-7890">
+              </div>
+              <div class="col-md-12 wow fadeInUp" data-wow-delay="0.2s">
+                <label for="comments" class="form-label">Comments, questions?</label>
+                <textarea class="form-control" id="comments" name="comments,&nbsp;questions" rows="3" required></textarea>
+              </div>
+              <br>
+              <div class="col-md-12 wow fadeInUp" data-wow-delay="0.2s">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+    
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+        -->
+    </div>
+</div>
+
+{% endblock %}

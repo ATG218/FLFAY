@@ -17,6 +17,16 @@ def team():
 def contact():
     return render_template("contact.html")
 
+@views.route('/form', methods=["GET", "POST"])
+def form():
+    if request.method == 'POST':
+        name = request.form.get('name')
+        message = request.form.get('message')
+        email = request.form.get('email')
+        return render_template("index.html")
+    else:
+        return render_template("form.html")
+
 @views.route('/admin')
 @login_required
 def admin():
